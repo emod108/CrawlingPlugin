@@ -1,0 +1,15 @@
+name: CrawlingPlugin
+version: '${project.version}'
+main: me.mod108.crawlingplugin.CrawlingPlugin
+api-version: '1.20'
+commands:
+  togglecrawling:
+    description: Starts/stops crawling
+    usage: /<command>
+    permission: crawlingplugin.togglecrawling
+permissions:
+  crawlingplugin.*:
+    description: Allows to use all CrawlingPlugin commands
+    children:
+      crawlingplugin.togglecrawling: true
+    default: op
